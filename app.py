@@ -6,7 +6,7 @@ app = Flask(__name__)
 students = {}
 
 def find_unique_char(name):
-    """Encontra a primeira letra não repetida do nome."""
+    """Find the first not repeated letter in the name."""
     char_counts = {}
     for char in name.lower():
         char_counts[char] = char_counts.get(char, 0) + 1
@@ -18,29 +18,29 @@ def find_unique_char(name):
     return '_'
     
 def add_unique_char(student):
-    """Adiciona a primeira letra não repetida ao objeto do estudante."""
+    """Add the first not repeated letter to the student object."""
     student_with_char = student.copy()
     student_with_char['first_unique_char'] = find_unique_char(student['name'])
     return student_with_char
 
 @app.route('/students', methods=['POST'])
 def add_student():
-    """Cadastrar um novo estudante."""
+    """Register new student."""
     data = request.get_json()
     if not data or 'name' not in data or 'score' not in data:
-        return jsonify({'error': 'Nome e nota são obrigatórios.'}), 400
+        return jsonify({'error': 'Score and name are mandatoy.'}), 400
     
     name = data['name']
     if not name or not name.strip():
-        return jsonify({'error': 'Nome não pode ser vazio.'}), 400
+        return jsonify({'error': 'Name cannot be empty.'}), 400
     score = data['score']
 
     try:
         score = float(score)
         if not (0 <= score <= 10):
-            return jsonify({'error': 'A nota deve estar entre 0 e 10.'}), 400
+            return jsonify({'error': 'Grade must be between 0 and 10.'}), 400
     except (ValueError, TypeError):
-        return jsonify({'error': 'A nota deve ser um número'}), 400
+        return jsonify({'error': 'Grade must be a number.'}), 400
     
     student_id = str(uuid.uuid4())
     new_student = {
@@ -54,16 +54,16 @@ def add_student():
 
 @app.route('/students', methods=['GET'])
 def get_all_students():
-    """Retorna lista de todos os estudantes."""
+    """Return a list of all students."""
     students_list = [add_unique_char(student) for student in students.values()] 
     return jsonify(students_list), 200
 
 @app.route('/students/<string:student_id>', methods=['GET'])
 def get_student(student_id):
-    """Retorna dados de um estudante especifico pelo ID"""
+    """Return data from a specific student ID."""
     student = students.get(student_id)
     if not student:
-        return jsonify({'error': 'Estudante não encontrado'}), 404
+        return jsonify({'error': 'Student not found.'}), 404
     
     return jsonify(add_unique_char(student)), 200
 
