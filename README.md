@@ -23,7 +23,13 @@ A API estará disponível em: http://127.0.0.1:5000/students
 
 <img width="675" height="872" alt="image" src="https://github.com/user-attachments/assets/00de43de-5186-4f46-8d89-eeb71955e8d3" /><br>
 
-<img width="499" height="403" alt="image" src="https://github.com/user-attachments/assets/af9f612f-0290-415f-93a0-8fab0e5cdd6d" />
+<img width="499" height="403" alt="image" src="https://github.com/user-attachments/assets/af9f612f-0290-415f-93a0-8fab0e5cdd6d" /><br>
+
+### GET /students/:id - Buscar por ID
+<img width="414" height="306" alt="image" src="https://github.com/user-attachments/assets/72276b1a-26d7-44ab-9b28-8b2af2e696c8" /><br>
+<img width="462" height="149" alt="image" src="https://github.com/user-attachments/assets/ab798efc-f269-400a-89a8-003837f14b29" />
+
+
 
 
 
