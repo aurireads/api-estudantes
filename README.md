@@ -10,6 +10,8 @@ A rota POST inclui validação de dados recebidos. A API verifica se os campos o
 
 Utilizei a lógica find_unique_char para não repetir letra. 
 
+Está rodando em: http://127.0.0.1:5000/students
+
 <img width="508" height="279" alt="image" src="https://github.com/user-attachments/assets/0abee341-9d4e-4ab9-8226-50fec694f9d6" /><br>
 
 <img width="488" height="392" alt="image" src="https://github.com/user-attachments/assets/0ba28350-713c-4a5c-b20b-6ff14da84dcc" /><br>
