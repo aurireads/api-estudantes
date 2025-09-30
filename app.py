@@ -15,7 +15,7 @@ def find_unique_char(name):
         if char_counts[char] == 1:
             return char
         
-        return '_'
+    return '_'
     
 def add_unique_char(student):
     """Adiciona a primeira letra não repetida ao objeto do estudante."""
@@ -31,6 +31,8 @@ def add_student():
         return jsonify({'error': 'Nome e nota são obrigatórios.'}), 400
     
     name = data['name']
+    if not name or not name.strip():
+        return jsonify({'error': 'Nome não pode ser vazio.'}), 400
     score = data['score']
 
     try:
