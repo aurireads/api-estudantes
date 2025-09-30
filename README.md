@@ -15,6 +15,7 @@ A API estará disponível em: http://127.0.0.1:5000/students
 ### Servidor Rodando
 <img width="508" height="279" alt="image" src="https://github.com/user-attachments/assets/0abee341-9d4e-4ab9-8226-50fec694f9d6" /><br>
 
+### POST /students - Cadastrar Estudante
 <img width="488" height="392" alt="image" src="https://github.com/user-attachments/assets/0ba28350-713c-4a5c-b20b-6ff14da84dcc" /><br>
 
 <img width="752" height="167" alt="image" src="https://github.com/user-attachments/assets/68524622-7ffe-4034-b3bf-62f318fbf900" /><br>
